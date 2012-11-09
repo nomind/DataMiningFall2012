@@ -4,6 +4,7 @@
 
 #include <string>
 #include <fstream>
+#include <memory>
 
 #include "Position.h"
 
@@ -15,7 +16,7 @@ private:
 	
 public:
 	PositionReader(std::string filePath);
-	Position* next();
+	std::unique_ptr<Position> next();
 };
 
 #endif

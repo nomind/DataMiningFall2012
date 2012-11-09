@@ -4,23 +4,18 @@
 #include "PositionReader.h"
 #include "types.h"
 
-PositionReader::PositionReader(std::string filePath) {
+PositionReader::PositionReader(const std::string filePath) {
 	PositionReader::maxLineLen = 1000;
 	
 	this->filePath = filePath;
 	this->fin.open(filePath.c_str(), std::ios::in);
 }
 
-Position* PositionReader::next() {
-	char str[maxLineLen];
-	fin.getline(str, maxLineLen);
+std::unique_ptr<Position> PositionReader::next() {
+	Coordinate xPos, yPos;
+	fin>>xPos>>yPos;
 	if(fin.is_open() && (!fin.eof())) {
-		std::stringstream ss;
-		Coordinate xPos, yPos;
-		
-		ss<<str;
-		ss>>xPos>>yPos;
-		Position *pos = new Position(xPos, yPos);
+		std::unique_ptr<Position> pos(new Position(xPos, yPos));
 		return pos;
 	}
 	if(fin.is_open()) {

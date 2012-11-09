@@ -9,7 +9,7 @@ public:
 	static void test1() {
 		PositionReader reader("sample.dat");
 		while(true) {
-			Position *pos = reader.next();
+			std::unique_ptr<Position> pos = reader.next();
 			if(pos == NULL) {
 				break;
 			}

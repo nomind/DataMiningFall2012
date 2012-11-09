@@ -14,10 +14,10 @@ private:
 	PositionId id;
 	
 public:
-	Position(Coordinate xPos, Coordinate yPos);
-	PositionId getId();
+	Position(const Coordinate xPos, const Coordinate yPos);
+	PositionId const getId();
 	
-	friend std::ostream& operator <<(std::ostream& out, Position& pos);
+	friend std::ostream& operator <<(std::ostream& out, const Position& pos);
 };
 
 #endif

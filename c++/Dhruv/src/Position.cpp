@@ -17,3 +17,11 @@ std::ostream& operator <<(std::ostream& out, const Position& pos) {
 	out<<"("<<pos.xPos<<", "<<pos.yPos<<")";
 	return out;
 }
+
+Coordinate Position::getX() {
+	return xPos;
+}
+
+Coordinate Position::getY() {
+	return yPos;
+}

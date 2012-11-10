@@ -7,8 +7,9 @@
 #define TYPES_H
 
 typedef long long int64;
-typedef int64 Coordinate;
-typedef double Distance;
+typedef double Coordinate;
 typedef int64 PositionId;
+
+typedef double Angle;
 
 #endif

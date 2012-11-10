@@ -1,8 +1,11 @@
 
 CC=g++
-CFLAGS=-c -Wall -Iinclude -Isrc -Itests -pedantic -std=c++0x
-EFLAGS=-Wall -Iinclude -Isrc -Itests -pedantic -std=c++0x
+CFLAGS=-c -Wall -Iinclude -Isrc -Itests -pedantic -std=c++0x -lm
+EFLAGS=-Wall -Iinclude -Isrc -Itests -pedantic -std=c++0x -lm
 
+main: src/main.cpp PositionIdAgent.o Position.o PositionReader.o PositionPairWriter.o
+	$(CC) $(EFLAGS) -o main src/main.cpp PositionIdAgent.o Position.o PositionReader.o PositionPairWriter.o
+	
 run_tests: run_tests.cpp PositionIdAgentTests.o PositionIdAgent.o Position.o PositionReader.o PositionReaderTests.o PositionPairWriter.o
 	$(CC) $(EFLAGS) -o run_tests run_tests.cpp PositionIdAgentTests.o PositionIdAgent.o Position.o PositionReader.o PositionReaderTests.o PositionPairWriter.o
 

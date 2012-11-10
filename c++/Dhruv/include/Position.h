@@ -16,6 +16,8 @@ private:
 public:
 	Position(const Coordinate xPos, const Coordinate yPos);
 	PositionId const getId();
+	Coordinate getX();
+	Coordinate getY();
 	
 	friend std::ostream& operator <<(std::ostream& out, const Position& pos);
 };

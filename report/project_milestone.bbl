@@ -1,0 +1,99 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Efrat99}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Alon~Efrat}{A.~E.}%
+     {Alon~Ziv}{A.~Z.}%
+     {}{}%
+     {Micha~Sharir}{M.~S.}}%
+  }
+  \strng{namehash}{AEMSAZ1}
+  \strng{fullhash}{AEMSAZ1}
+  \field{sortinit}{A}
+  \field{title}{Computing the Smallest k-Enclosing Circle and Related Problems}
+  \field{year}{1999}
+\endentry
+
+\entry{Vivaldi}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Frank~Dabek}{F.~D.}%
+     {Frans Kaashoek Robert~Morris}{F.~K. R.~M.}%
+     {}{}%
+     {Russ~Cox}{R.~C.}}%
+  }
+  \strng{namehash}{FDRCFKRM1}
+  \strng{fullhash}{FDRCFKRM1}
+  \field{sortinit}{F}
+  \field{title}{Vivaldi: A Decentralized Network Coordinate System}
+  \field{journaltitle}{SIGCOMM '04 Proceedings of the 2004 conference on
+  Applications, technologies, architectures, and protocols for computer
+  communications}
+  \field{year}{2004}
+\endentry
+
+\entry{gephi}{misc}{}
+  \field{sortinit}{G}
+  \field{howpublished}{\url{https://gephi.org/}}
+  \field{title}{Gephi - The Open Graph Viz Platform}
+\endentry
+
+\entry{snap}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Leskovec}{L.}%
+     {Jure}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LJ1}
+  \strng{fullhash}{LJ1}
+  \field{sortinit}{L}
+  \field{howpublished}{\url{http://snap.stanford.edu/data/egonets-Facebook.html}}
+  \field{title}{SNAP - Stanford Network Analysis Project}
+\endentry
+
+\entry{cmdscale}{misc}{}
+  \field{sortinit}{R}
+  \field{howpublished}{\url{http://stat.ethz.ch/R-manual/R-devel/library/stats/html/cmdscale.html}}
+  \field{title}{R - Classical (Metric) Multidimensional Scaling}
+\endentry
+
+\entry{Orion}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Xiaohan~Zhao}{X.~Z.}%
+     {Christo Wilson Haitao Zheng Ben Y.~Zhao}{C.~W. H. Z. B. Y.~Z.}%
+     {}{}%
+     {Alessandra~Sala}{A.~S.}}%
+  }
+  \strng{namehash}{XZASCWHZBYZ1}
+  \strng{fullhash}{XZASCWHZBYZ1}
+  \field{sortinit}{X}
+  \field{title}{Orion: Shortest Path Estimation for Large Social Graphs}
+  \field{journaltitle}{Proceedings of The 3rd Workshop on Online Social
+  Networks (WOSN)}
+  \field{year}{2010}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

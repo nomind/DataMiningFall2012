@@ -1,6 +1,7 @@
 
 #include "lib.cpp"
 #include <cassert>
+#include <iostream>
 
 using namespace std;
 
@@ -37,15 +38,8 @@ int main(int argc, char **argv) {
         temp = temp * mat;
         updated = dist.update(temp, d++);
     }
-    
-    //dist.print();
-    for(int i=1; i<=count_node; i++) {
-        for(int j=1; j<=count_node; j++) {
-            cout<<dist.get(i, j)*10<<" ";
-        }
-        cout<<endl;
-    }
-
+    cout<<d<<endl;
+        
     return 0;
 }
 

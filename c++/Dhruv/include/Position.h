@@ -3,6 +3,7 @@
 #define POSITION_H
 
 #include <ostream>
+#include <istream>
 
 #include "types.h"
 

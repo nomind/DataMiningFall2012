@@ -1,6 +1,6 @@
-
-dst = read.matrix("all_pairs0.dat")
+require("tseries")
+dst = read.matrix("../data/dist_mat/dist_mat_0.dat")
 mds = cmdscale(dst, k=2)
 plot(mds)
-write.table(mds, file="points.dat", row.names=FALSE, col.names=FALSE)
+write.table(mds, file="../data/points/0.dat", row.names=FALSE, col.names=FALSE)
 

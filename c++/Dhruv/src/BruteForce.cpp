@@ -140,9 +140,8 @@ private:
 	
 public:
 	SinglePivotMethod(vector<Position>& posList, double radius)
-	: PI(3.14159265) {
+	: posList(posList), PI(3.14159265) {
 		this->radius = radius;
-		this->posList = posList;
 	}
 	
 	void process(Position pivot, Position pos) {
@@ -164,11 +163,11 @@ public:
 		
 		AngleInterval ai(mid - delta, mid + delta);
 		
-		pivot.addAngleInterval(ai);
+		//pivot.addAngleInterval(ai);
 	}
 	
 	void process() {
-		size_t sz = posList.size()
+		size_t sz = posList.size();
 		for(size_t i=0; i<sz; i++) {
 			for(size_t j=0; j<sz; j++) {
 				if(i==j) {
@@ -180,24 +179,4 @@ public:
 	}
 };
 
-int main() {
-	RandomDataGenerator rdg(100);
-	vector<Position> posList;
-	rdg.generate(posList);
-	
-	/*for(size_t i=0; i<posList.size(); i++) {
-		cout<<posList[i]<<endl;
-	}*/
-	
-	/*Position center(0, 0);
-	Circle cir(center, 1000000);
-	
-	Position A(0, 0);
-	Position B(5, 5);
-	Position C(0, 10);*/
-	
-	BruteForce bf(posList);
-	cout<<bf.getMaxCountUptoRadius(1000)<<endl;
-	
-	return 0;
-}
+

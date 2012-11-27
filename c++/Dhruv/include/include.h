@@ -10,6 +10,7 @@
 
 #include "types.h"
 #include "Position.h"
+#include "AngleInterval.h"
 
 using std::string;
 using std::vector;

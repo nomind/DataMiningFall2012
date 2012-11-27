@@ -88,7 +88,7 @@ public:
 			}
 		}
 		
-		sort(cirList.begin(), cirList.end());
+		//sort(cirList.begin(), cirList.end());
 		/*for(size_t i=0; i<cirList.size(); i++) {
 			cout<<cirList[i].getRadius()<<" "<<cirList[i].getPointsInside()<<endl;
 		}*/
@@ -102,6 +102,16 @@ public:
 			}
 		}
 		return count;
+	}
+	
+	double getDiameter() {
+	    double diameter = 0;
+		for(size_t i=0; i<cirList.size(); i++) {
+			if(2.0*cirList[i].getRadius() > diameter) {
+				diameter = 2.0*cirList[i].getRadius();
+			}
+		}
+		return diameter;
 	}
 	
 	Circle circumCircle(Position X, Position B, Position C) {

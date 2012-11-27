@@ -7,8 +7,8 @@
 using namespace std;
 
 int main(int argc, char **argv) {
-    assert(argc > 1);
-	char *filename = argv[1];
+    //assert(argc > 1);
+	char *filename = "../../data/points/1.dat";
 	
 	ifstream fin;
 	fin.open(filename, ios::in);
@@ -22,16 +22,18 @@ int main(int argc, char **argv) {
 	}
 	
 	int sz = posList.size();
-	double dia = 0.0;
+	vector<double> list;
 	for(int i=0; i<sz; i++) {
-	    for(int j=0; j<sz; j++) {
+	    for(int j=i+1; j<sz; j++) {
 	        double d = Distance::dist(posList[i], posList[j]);
-	        if(dia < d) {
-	            dia = d;
-	        }
+	        list.push_back(d);
 	    }
 	}
 	
-	cout<<dia<<endl;
+	sort(list.begin(), list.end());
+	for(int i=list.size() -1 ; i>=0; i--) {
+	    printf("%.5f\n", list[i]);
+	}
+    return 0;	
 }
 

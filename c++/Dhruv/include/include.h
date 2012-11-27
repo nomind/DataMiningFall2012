@@ -7,14 +7,12 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <ostream>
+#include <istream>
+
+using namespace std;
 
 #include "types.h"
 #include "Position.h"
-#include "AngleInterval.h"
-
-using std::string;
-using std::vector;
-using std::cout;
-using std::endl;
 
 #endif

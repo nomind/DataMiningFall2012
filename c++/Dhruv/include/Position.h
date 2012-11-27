@@ -2,9 +2,7 @@
 #ifndef POSITION_H
 #define POSITION_H
 
-#include <ostream>
-#include <istream>
-
+#include "include.h"
 #include "types.h"
 
 class Position {

@@ -9,4 +9,4 @@ g++ diameter.cpp -o diameter
 ./diameter ../../data/facebook/6.edges > ../../data/fb_diameter/6.dat
 ./diameter ../../data/facebook/7.edges > ../../data/fb_diameter/7.dat
 ./diameter ../../data/facebook/8.edges > ../../data/fb_diameter/8.dat
-
+./diameter ../../data/facebook/9.edges > ../../data/fb_diameter/9.dat

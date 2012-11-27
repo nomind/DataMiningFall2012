@@ -10,6 +10,4 @@ typedef long long int64;
 typedef double Coordinate;
 typedef int64 PositionId;
 
-typedef double Angle;
-
 #endif

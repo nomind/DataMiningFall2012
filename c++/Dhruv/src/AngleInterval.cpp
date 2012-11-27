@@ -7,3 +7,5 @@ AngleInterval::AngleInterval(Angle start, Angle end) {
 	this->start = start;
 	this->end = end;
 }
+
+

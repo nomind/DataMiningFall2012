@@ -31,12 +31,12 @@ int main(int argc, char **argv) {
     EdgeMatrix mat(count_node);
     mat.update(edge_list);
     EdgeMatrix temp(count_node);
-    int d = 1, updated = 1;
+    int d = 0, updated = 1;
     temp = mat;
     
     while(updated) {
         temp = temp * mat;
-        updated = dist.update(temp, d++);
+        updated = dist.update(temp, ++d);
     }
     
     //dist.print();

@@ -8,6 +8,7 @@ using namespace std;
 
 static int count_node = 0;
 map<int, int> id_list;
+static int default_dist = -1;
 
 struct Edge {
 private:
@@ -128,7 +129,7 @@ public:
                 if(i==j) {
                     mat[i][j] = 0;
                 } else {
-                    mat[i][j] = -1;
+                    mat[i][j] = default_dist;
                 }
             }
         }
@@ -146,7 +147,7 @@ public:
         
         for(int i=1; i<=sz; i++) {
             for(int j=1; j<=sz; j++) {
-                if(e.get(i, j) && mat[i][j] == -1) {
+                if(e.get(i, j) && mat[i][j] == default_dist) {
                     count++;
                     mat[i][j] = d;
                 }

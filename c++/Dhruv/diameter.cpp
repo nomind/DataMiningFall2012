@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
         temp = temp * mat;
         updated = dist.update(temp, ++d);
     }
-    cout<<d<<endl;
+    cout<<d-1<<endl;
         
     return 0;
 }

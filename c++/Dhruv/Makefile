@@ -3,8 +3,11 @@ CC=g++
 CFLAGS=-c -Wall -Iinclude -Isrc -Itests -pedantic -std=c++0x -lm
 EFLAGS=-Wall -Iinclude -Isrc -Itests -pedantic -std=c++0x -lm
 
-main: points_diameter min_disk points_pairs
+main: points_diameter min_disk points_pairs runtime
 
+runtime: runtime.cpp src/SinglePivotMethod.cpp src/BruteForce.cpp PositionIdAgent.o Position.o PositionReader.o PositionPairWriter.o
+	$(CC) $(EFLAGS) -o runtime runtime.cpp PositionIdAgent.o Position.o PositionReader.o PositionPairWriter.o
+	
 points_pairs: points_pairs.cpp src/SinglePivotMethod.cpp src/BruteForce.cpp PositionIdAgent.o Position.o PositionReader.o PositionPairWriter.o
 	$(CC) $(EFLAGS) -o points_pairs points_pairs.cpp PositionIdAgent.o Position.o PositionReader.o PositionPairWriter.o
 	
